@@ -1,4 +1,4 @@
-import {Cart} from "../components/Cart/Cart";
+import {Cart} from "../components/Cart/CartClass/Cart";
 import {Meal} from "../components/Meals/Meal";
 
 describe('testing cart constructor', () => {

@@ -1,4 +1,6 @@
 import {Dispatch, useState} from "react";
+import styles from './MealItemForm.module.css'
+import {Input} from "../../UI/Input";
 export const MealItemForm = (props: {addToCart:Dispatch<any>}) => {
     const setQuantity = (event: any) => {
             updateQuantity(() => {
@@ -6,8 +8,15 @@ export const MealItemForm = (props: {addToCart:Dispatch<any>}) => {
         });
     }
     const [quantity, updateQuantity] = useState<number>(0)
-    return <div>
-        <input onChange={setQuantity} type="number"/>
-        <button onClick={props.addToCart}>Add to cart</button>
-    </div>
+    return <form className={styles.form}>
+        <Input label="Amount" input={{
+            id: 'amount',
+            type: 'number',
+            min: '1',
+            max: '5',
+            step: '1',
+            defaultValue: '1'
+        }}/>
+        <button onClick={props.addToCart}>+ Add</button>
+    </form>
 }

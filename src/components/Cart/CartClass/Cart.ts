@@ -1,4 +1,4 @@
-import {Meal} from "../Meals/Meal";
+import {Meal} from "../../Meals/Meal";
 
 export class Cart {
     private subTotal: number;
@@ -39,8 +39,8 @@ export class Cart {
         this.subTotal = 0;
         this.contents = new Map<string, [Meal, number]>();
         this.cartQuantity = 0;
-        // const testMeal = new Meal("this is an id", 12.99, 'Some very tasty sushi', 'Maguro');
-        // this.addToCart(testMeal, 1);
+        const testMeal = new Meal("this is an id", 12.99, 'Some very tasty sushi', 'Maguro');
+        this.addToCart(testMeal, 1);
     }
 }
 

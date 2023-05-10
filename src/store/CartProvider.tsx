@@ -1,5 +1,5 @@
 import {CartContext} from "./cart-context";
-import {Cart} from "../components/Cart/Cart";
+import {Cart} from "../components/Cart/CartClass/Cart";
 
 export const CartProvider = (props: any) => {
     const cart = new Cart();
